@@ -1,5 +1,7 @@
 import React from 'react';
 import ArtPiecePreview from './ArtPiecePreview';
+import Image from "next/image"
+import Link from "next/link"
 
 function ArtPieces({ pieces }) {
   return (

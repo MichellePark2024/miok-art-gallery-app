@@ -1,7 +1,8 @@
-// pages/spotlight.js
+
 import React, { useState, useEffect } from 'react';
 import Spotlight from '../components/Spotlight';
 import FavoriteButton from '../components/FavoriteButton';
+
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
