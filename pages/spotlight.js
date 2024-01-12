@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Spotlight from '../components/Spotlight';
 import FavoriteButton from '../components/FavoriteButton';
-
+// import randomItem from "@/lib/random-Item"
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
