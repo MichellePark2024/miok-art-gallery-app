@@ -4,6 +4,9 @@ const nextConfig = {
     styledComponents: true,
   },
   reactStrictMode: true,
+  images: {
+    domains: ["example-apis.vercel.app"],
+  },
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/i,
@@ -16,3 +19,10 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
+
+
+// module.exports = {
+//   images: {
+//     domains: ['miok-art-gallery-app.vercel.app'],
+//   },
+// };
