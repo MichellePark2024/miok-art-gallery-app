@@ -1,10 +1,31 @@
-import GlobalStyle from "../styles";
+// import React from 'react';
+// import Layout from '../components/Layout';
+// import useLocalStorageState from '../hooks/useLocalStorageState';
 
-export default function App({ Component, pageProps }) {
+// function MyApp({ Component, pageProps }) {
+//   const [favorites, setFavorites] = useLocalStorageState('favorites', []);
+//   const [comments, setComments] = useLocalStorageState('comments', []);
+
+//   return (
+//     <Layout>
+//       <Component {...pageProps} favorites={favorites} setFavorites={setFavorites} comments={comments} setComments={setComments} />
+//     </Layout>
+//   );
+// }
+
+// export default MyApp;
+
+
+
+import React from 'react';
+import Layout from '../components/Layout';
+
+function MyApp({ Component, pageProps }) {
   return (
-    <>
-      <GlobalStyle />
+    <Layout>
       <Component {...pageProps} />
-    </>
+    </Layout>
   );
 }
+
+export default MyApp;
