@@ -1,10 +1,9 @@
-// pages/index.js
 import React, { useState, useEffect } from 'react';
 import ArtPieces from '../components/ArtPieces';
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
-export default function Home() {
+export default function HomePage() {
   const [artPieces, setArtPieces] = useState([]);
 
   useEffect(() => {
