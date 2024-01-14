@@ -1,7 +1,7 @@
-// components/ArtPiecePreview.js
 import React from 'react';
 import FavoriteButton from './FavoriteButton';
 import Image from 'next/image';
+// import FavoriteButton from './FavoriteButton';
 
 function ArtPiecePreview({ image, title, artist, isFavorite, onToggleFavorite }) {
   return (

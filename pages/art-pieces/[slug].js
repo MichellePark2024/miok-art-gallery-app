@@ -1,10 +1,10 @@
-// pages/art-pieces/[slug].js
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import ArtPieceDetails from '../../components/ArtPieceDetails';
 import CommentForm from '../../components/CommentForm';
 import Comments from '../../components/Comments';
 import ColorPalette from '../../components/ColorPalette';
+import FavoriteButton from '@/components/FavoriteButton';
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
@@ -50,12 +50,12 @@ export default function ArtPieceDetailsPage({ favorites, setFavorites, comments,
         genre={artPiece.genre}
       />
       <FavoriteButton
-        isFavorite={favorites.includes(artPiece.id)}
+        isFavorite={favorites.includes(artPiece.slug)}
         onToggleFavorite={() => {
-          if (favorites.includes(artPiece.id)) {
-            setFavorites(favorites.filter((id) => id !== artPiece.id));
+          if (favorites.includes(artPiece.slug)) {
+            setFavorites(favorites.filter((slug) => slug !== artPiece.slug));
           } else {
-            setFavorites([...favorites, artPiece.id]);
+            setFavorites([...favorites, artPiece.slug]);
           }
         }}
       />

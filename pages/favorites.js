@@ -1,6 +1,7 @@
-// pages/favorites.js
+
 import React, { useState, useEffect } from 'react';
 import ArtPieces from '../components/ArtPieces';
+
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
