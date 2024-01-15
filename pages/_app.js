@@ -19,6 +19,12 @@
 
 import React from 'react';
 import Layout from '../components/Layout';
+import useGlobalStore from '@/store';
+// import useGlobalStore from '@/store';
+
+// const queryClient = new QueryClient();
+
+const fetcher = (url) => fetch(url).then((response) => response.json())
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -29,3 +35,23 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default MyApp;
+
+
+// 3rd
+// import { QueryClient, QueryClientProvider } from 'react-query';
+// import useGlobalStore from '../path-to-your-store/store';
+
+// const queryClient = new QueryClient();
+
+// function MyApp({ Component, pageProps }) {
+//   return (
+    // <QueryClientProvider client={queryClient}>
+    //   <useGlobalStore.Provider>
+    //     <Component {...pageProps} />
+    //   </useGlobalStore.Provider>
+    // </QueryClientProvider>
+//   );
+// }
+
+// export default MyApp;
+
